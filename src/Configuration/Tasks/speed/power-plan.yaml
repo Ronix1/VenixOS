@@ -1,0 +1,13 @@
+---
+title: tweak
+actions:
+- !writeStatus: {status: 'Setting Powerplan'}
+- !cmd: {command: 'powercfg -import "C:\Windows\Venix\venix.pow"'}
+- !cmd: {command: 'powercfg.exe /setactive b7a3bc69-93b9-43c3-93cb-69d9ae3becfe'}
+- !cmd: {command: 'powercfg.exe /change monitor-timeout-ac 0'}
+- !cmd: {command: 'powercfg.exe /change monitor-timeout-dc 0'}
+- !cmd: {command: 'powercfg.exe /change standby-timeout-ac 0'}
+- !cmd: {command: 'powercfg.exe /change standby-timeout-dc 0'}
+- !cmd: {command: 'powercfg.exe /change hibernate-timeout-ac 0'}
+- !cmd: {command: 'powercfg.exe /change hibernate-timeout-dc 0'}
+- !cmd: {command: 'powercfg.exe /hibernate off'}

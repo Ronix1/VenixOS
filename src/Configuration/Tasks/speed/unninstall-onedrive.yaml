@@ -1,0 +1,13 @@
+---
+title: tweak
+actions:
+- !writeStatus: {status: 'Uninstalling OneDrive'}
+
+- !cmd: {command: '%systemroot%\System32\OneDriveSetup.exe /uninstall >nul 2>&1'}
+- !cmd: {command: 'if exist "%userprofile%\OneDrive" rmdir /s /q "%userprofile%\OneDrive"'}
+- !cmd: {command: 'if exist "%localappdata%\Microsoft\OneDrive" rmdir /s /q "%localappdata%\Microsoft\OneDrive" >nul 2>&1'}
+- !cmd: {command: 'if exist "%programdata%\Microsoft OneDrive" rmdir /s /q "%programdata%\Microsoft OneDrive" >nul 2>&1'}
+- !cmd: {command: 'if exist "%systemdrive%\OneDriveTemp" rmdir /s /q "%systemdrive%\OneDriveTemp" >nul 2>&1'}
+- !cmd: {command: 'del "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Microsoft OneDrive.lnk" /s /f /q >nul 2>&1'}
+- !cmd: {command: 'del "%APPDATA%\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk" /s /f /q >nul 2>&1'}
+- !cmd: {command: 'del "%USERPROFILE%\Links\OneDrive.lnk" /s /f /q >nul 2>&1'}

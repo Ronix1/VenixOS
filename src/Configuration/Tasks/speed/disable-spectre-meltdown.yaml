@@ -1,0 +1,20 @@
+---
+title: tweak
+actions:
+  - !writeStatus: {status: 'disabling spectre meltdown'}
+
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management'
+    value: 'FeatureSettings'
+    data: '1'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management'
+    value: 'FeatureSettingsOverride'
+    data: '3'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management'
+    value: 'FeatureSettingsOverrideMask'
+    data: '3'
+    type: REG_DWORD

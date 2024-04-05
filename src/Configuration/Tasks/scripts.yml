@@ -1,0 +1,77 @@
+---
+title: Run scripts
+privilege: TrustedInstaller
+actions:
+  - !writeStatus: {status: 'Running external scripts'}
+  - !writeStatus: {status: 'Tweaking gpu...'}
+ - !run:
+    exeDir: true
+    exe: 'gpu.bat'
+    weight: 100
+  - !writeStatus: {status: 'Disabling Mitigations'}
+ - !run:
+    exeDir: true
+    exe: 'mitigations.cmd'
+    weight: 100
+  - !run:
+    exeDir: true
+    exe: 'msi.cmd'
+    weight: 100
+  - !writeStatus: {status: 'Uninstalling Edge', option: 'opt-edge'}
+  - !run:
+    exeDir: true
+    exe: 'edge.cmd'
+    weight: 100
+    option: 'opt-edge'
+  - !writeStatus: {status: 'Disabling Nagle's algorithm'}
+  - !run:
+    exeDir: true
+    exe: 'disable-nagles-algorithm.cmd'
+    weight: 100
+  - !writeStatus: {status: 'Configuring NIC settings...'}
+  - !run:
+    exeDir: true
+    exe: 'configure-nic-settings.cmd'
+    weight: 100
+  - !run:
+    exeDir: true
+    exe: 'autotunning.cmd'
+    weight: 100
+  - !writeStatus: {status: 'Applying DNS', option: 'opt-dns'}
+  - !run:
+    exeDir: true
+    exe: 'dns.cmd'
+    weight: 100
+    option: 'opt-dns'
+
+  - !writeStatus: {status: 'Installing Apps'}
+  - !run:
+    exe: 'powershell.exe'
+    args: '-NoP -File "app.ps1"'
+    exeDir: true
+    weight: 150
+    runas: currentUserElevated
+  - !writeStatus: {status: 'Installing browser', option: 'chrome'}
+  - !run:
+    exe: 'powershell.exe'
+    args: '-NoP -File "chrome.ps1"'
+    exeDir: true
+    weight: 150
+    option: 'chrome'
+    runas: currentUserElevated
+  - !writeStatus: {status: 'Installing browser', option: 'brave'}
+  - !run:
+    exe: 'powershell.exe'
+    args: '-NoP -File "brave.ps1"'
+    exeDir: true
+    weight: 150
+    option: 'brave'
+    runas: currentUserElevated
+  - !writeStatus: {status: 'Installing browser', option: 'firefox'}
+  - !run:
+    exe: 'powershell.exe'
+    args: '-NoP -File "firefox.ps1"'
+    exeDir: true
+    weight: 150
+    option: 'firefox'
+    runas: currentUserElevated

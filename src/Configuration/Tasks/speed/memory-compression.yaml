@@ -1,0 +1,6 @@
+---
+title: tweak
+actions:
+  - !writeStatus: {status: 'Tweaking memory compression'}
+   
+  - !cmd: {command: 'PowerShell -Command "Disable-MMAgent -MemoryCompression"'}

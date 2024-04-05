@@ -1,0 +1,9 @@
+---
+title: tweak
+actions:
+
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management'
+    value: 'LargeSystemCache'
+    data: '1'
+    type: REG_DWORD
