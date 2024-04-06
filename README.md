@@ -1,5 +1,8 @@
 # VenixOS
-- VenixOS is a Windows modification that offers a **100% free** and **open-source** solution. It is designed to enhance performance, Improve privacy, all while maintaining system stability.</p>
+> [!NOTE]  
+> **Please be aware this is the first version of VenixOS, so you might find some issues or bugs.**
+
+VenixOS is a Windows modification that offers a **100% free** and **open-source** solution. It is designed to enhance performance, Improve privacy, all while maintaining system stability.</p>
 
 ## About
 - VenixOS is a **replacement** for VTweaker and old .iso version of VenixOS
