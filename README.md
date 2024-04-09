@@ -11,7 +11,7 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
 
 ## Usage
 > [!WARNING]  
-> **Tweaking your system can be risky. Always have a backup plan ready just in case.**
+> **Tweaking your system can be risky. Always have a backup ready just in case.**
 - Download AME Wizard and the VenixOS Playbook <b>(.apbx)</b>
 - Drag and drop The Playbook to import it
 - Follow the prompts and instructions
