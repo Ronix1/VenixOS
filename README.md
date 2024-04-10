@@ -33,7 +33,6 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
 
 ### Security and Privacy
 
-  - Disable Windows updates
   - Disable telemetry
   - Disable spectre meltdown
   - Disable fault tolerant heap
@@ -44,7 +43,6 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
 ### Network and Internet Configuration
 
   - Disable nagle's algorithm
-  - Configure dns
   - Configure nic settings
   - Configure network settings
 
@@ -65,4 +63,11 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
   - Enable files extension
   - Show hidden files
   - Configure mouse and keyboard
-  - Disable Microsoft Edge
+
+### Optional
+  - Uninstall Microsoft Edge
+  - Cloudflare dns
+  - Venix theme
+  - Disable Windows update
+  - Clean-up
+  - Disable clipboard
