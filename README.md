@@ -30,7 +30,8 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
   - Disable memory compression
   - Configure gpu settings
   - Configure msi mode
-
+  - Disable useless windows devices
+  
 ### Security and Privacy
 
   - Disable telemetry
@@ -56,6 +57,7 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
   - Disable GPU energy kernel driver
   - Disable energy logging
   - Disable hibernate mode
+  - Apply Venix Custom PowerPlan
 
 ### User Interface and Experience
 
@@ -63,11 +65,12 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
   - Enable files extension
   - Show hidden files
   - Configure mouse and keyboard
+  - Download and Install Browser (Brave/FireFox/Chrome)
 
 ### Optional
   - Uninstall Microsoft Edge
-  - Cloudflare dns
-  - Venix theme
+  - Apply Cloudflare DNS
+  - Apply Venix theme
   - Disable Windows update
   - Clean-up
   - Disable clipboard
