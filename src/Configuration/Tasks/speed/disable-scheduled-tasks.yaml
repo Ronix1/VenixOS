@@ -1,0 +1,40 @@
+---
+title: tweak
+actions:
+- !writeStatus: {status: 'Disabling scheduled tasks'}
+
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\AppID\SmartScreenSpecific" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Application Experience\ProgramDataUpdater" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Application Experience\StartupAppTask" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\MemoryDiagnostic\ProcessMemoryDiagnosticEvent" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Uploader" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Shell\FamilySafetyUpload" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\OfficeTelemetryAgentLogOn" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\OfficeTelemetryAgentFallBack" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "\Microsoft\Office\OfficeTelemetryAgentFallBack2016" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "\Microsoft\Office\OfficeTelemetryAgentLogOn2016" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\Office 15 Subscription Heartbeat" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\Office 16 Subscription Heartbeat" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\Windows Error Reporting\QueueReporting" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Windows\WindowsUpdate\Automatic App Update" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "NIUpdateServiceStartupTask" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "CCleaner Update" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "CCleanerSkipUAC - %username%" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Adobe Acrobat Update Task" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "AMDLinkUpdate" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\Office Automatic Updates 2.0" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\Office Feature Updates" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "Microsoft\Office\Office Feature Updates Logon" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "GoogleUpdateTaskMachineCore" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /Change /TN "GoogleUpdateTaskMachineUA" /Disable >nul 2>&1'}
+- !cmd: {command: 'schtasks /DELETE /TN "AMDInstallLauncher" /f >nul 2>&1'}
+- !cmd: {command: 'schtasks /DELETE /TN "AMDLinkUpdate" /f >nul 2>&1'}
+- !cmd: {command: 'schtasks /DELETE /TN "AMDRyzenMasterSDKTask" /f >nul 2>&1'}
+- !cmd: {command: 'schtasks /DELETE /TN "DUpdaterTask" /f >nul 2>&1'}
+- !cmd: {command: 'schtasks /DELETE /TN "ModifyLinkUpdate" /f >nul 2>&1'}

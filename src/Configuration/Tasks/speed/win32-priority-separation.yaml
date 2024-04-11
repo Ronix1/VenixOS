@@ -1,0 +1,10 @@
+---
+title: tweak
+actions:
+  - !writeStatus: {status: 'Setting win32priorityseparation'}
+
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl'
+    value: 'Win32PrioritySeparation'
+    data: '26'
+    type: REG_DWORD

@@ -1,0 +1,31 @@
+---
+title: Run files
+privilege: TrustedInstaller
+actions: []
+tasks:
+- Tasks\prepare.yml
+- Tasks\speed\debloat.yaml
+- Tasks\speed\disable-automatic-maintenance.yaml
+- Tasks\speed\disable-energy-logging.yaml
+- Tasks\speed\disable-fault-tolerant-heap.yaml
+- Tasks\speed\disable-gpuenergydrv.yaml
+- Tasks\speed\disable-power-throttling.yaml
+- Tasks\speed\disable-scheduled-tasks.yaml
+- Tasks\speed\disable-services.yaml
+- Tasks\speed\disable-spectre-meltdown.yaml
+- Tasks\speed\disable-windows-update.yaml
+- Tasks\speed\disk-optimization.yaml
+- Tasks\speed\enable-game-mode.yaml
+- Tasks\speed\fse.yaml
+- Tasks\speed\large-system-cache.yaml
+- Tasks\speed\memory-compression.yaml
+- Tasks\speed\power-plan.yaml
+- Tasks\speed\realtime-csrss.yaml
+- Tasks\speed\unninstall-onedrive.yaml
+- Tasks\speed\win32-priority-separation.yaml
+- Tasks\speed\gamebarpresencewriter.yaml
+- Tasks\speed\edge.yaml
+- Tasks\misc\misc.yaml
+- Tasks\extra.yml
+- Tasks\cleanup.yml
+- Tasks\scripts.yml

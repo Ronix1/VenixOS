@@ -1,0 +1,4 @@
+---
+title: tweak
+actions:
+  - !cmd: {command: 'PowerShell -Command "Disable-MMAgent -MemoryCompression"'}

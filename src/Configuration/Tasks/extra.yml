@@ -1,0 +1,36 @@
+---
+title: change wallpaper
+privilege: TrustedInstaller
+option: opt-theme
+actions:
+  - !writeStatus: {status: 'Applying theme'}
+  - !registryValue:
+    path: 'HKCU\Control Panel\Colors'
+    value: 'InfoWindow'
+    data: '20, 20, 20'
+    type: REG_SZ
+  - !cmd:
+    command: 'copy /y "Themes" "%windir%\Resources\Themes" > nul'
+    exeDir: true
+    wait: true
+
+  - !registryValue:
+    path: 'HKCU\Control Panel\Desktop'
+    value: 'TranscodedImageCache'
+    operation: delete
+
+  - !registryValue:
+    path: 'HKCU\Control Panel\Desktop'
+    value: 'WallPaper'
+    data: '%windir%\Venix\wall\venix-abstract1.png'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers'
+    value: 'BackgroundHistoryPath0'
+    data: '%windir%\Venix\wall\venix-topographic_dark.png'
+    type: REG_SZ
+  - !registryValue:
+    path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Wallpapers'
+    value: 'BackgroundHistoryPath1'
+    data: '%windir%\Venix\wall\venix-topographic_light.png'
+    type: REG_SZ

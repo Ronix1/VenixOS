@@ -1,0 +1,10 @@
+---
+title: tweak
+actions:
+  - !writeStatus: {status: 'Disabling fault tolerant heap'}
+
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\FTH'
+    value: 'Enabled'
+    data: '0'
+    type: REG_DWORD

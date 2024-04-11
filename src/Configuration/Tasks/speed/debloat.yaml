@@ -1,0 +1,60 @@
+---
+title: Debloating Windows
+privilege: TrustedInstaller
+actions:
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *xboxapp* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *3dbuilder* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *zunevideo* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *zunemusic* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *bingweather* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *bingnews* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *bingsports* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *bingfinance* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *getstarted* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *officehub* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *skypeapp* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *gethelp* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *solitairecollection* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *messaging* | Remove-AppxPackage" >nul 2>&1'}
+- !cmd: {command: 'powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Get-AppxPackage *people* | Remove-AppxPackage" >nul 2>&1'}
+- !writeStatus: {status: 'Disabling defender', option: 'disabledef'}
+- !cmd:
+  command: 'reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg add "HKLM\SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Real-Time Protection" /v "DisableScanOnRealtimeEnable" /t REG_DWORD /d "1" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "SecurityHealth" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d "0" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d "0" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'
+- !cmd:
+  command: 'reg add "HKLM\SOFTWARE\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d "0" /f >nul 2>&1'
+  exeDir: true
+  wait: true
+  option: 'disabledef'

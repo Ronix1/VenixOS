@@ -1,0 +1,65 @@
+---
+title: preparing for tweaks
+privilege: TrustedInstaller
+actions:
+- !writeStatus: {status: 'Cleaning up', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %appdata%\Listary\UserData > nul', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%APPDATA%\Sun\Java\Deployment\cache"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%APPDATA%\Macromedia\Flash Player"', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %ProgramFiles(x86)%\Steam\Dumps', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %ProgramFiles(x86)%\Steam\Traces', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %ProgramFiles(x86)%\Steam\appcache\*.log', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%AppData%\vstelemetry" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%LocalAppData%\Microsoft\VSApplicationInsights" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%ProgramData%\Microsoft\VSApplicationInsights" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\Microsoft\VSApplicationInsights" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\VSFaultInfo" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\VSFeedbackPerfWatsonData" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\VSFeedbackVSRTCLogs" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\VSRemoteControl" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\VSTelem" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%Temp%\VSTelem.Out" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'rmdir /s /q "%USERPROFILE%\.dotnet\TelemetryStorageService" 2>nul', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q "%localappdata%\Microsoft\Windows\INetCache\IE\*"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\Windows\WebCache"', option: 'opt-clean'}
+- !cmd: {command: 'reg delete "HKCU\SOFTWARE\Microsoft\Internet Explorer\TypedURLs" /va /f', option: 'opt-clean'}
+- !cmd: {command: 'reg delete "HKCU\SOFTWARE\Microsoft\Internet Explorer\TypedURLsTime" /va /f', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q %userprofile%\Local Settings\Temporary Internet Files', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\Windows\Temporary Internet Files"', option: 'opt-clean'}
+- !cmd: {command: 'takeown /f "%localappdata%\Temporary Internet Files" /r /d y', option: 'opt-clean'}
+- !cmd: {command: 'icacls "%localappdata%\Temporary Internet Files" /grant administrators:F /t', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Temporary Internet Files"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\Windows\INetCache"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\Feeds Cache"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%APPDATA%\Microsoft\Windows\Cookies"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\Windows\INetCookies"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\InternetExplorer\DOMStore"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Microsoft\Internet Explorer"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Google\Chrome\User Data\Crashpad\reports\"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%localappdata%\Google\CrashReports\"', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q "%localappdata%\Google\Software Reporter Tool\*.log"', option: 'opt-clean'}
+- !cmd: {command: 'del /q /s /f "%USERPROFILE%\Local Settings\Application Data\Safari\WebpageIcons.db"', option: 'opt-clean'}
+- !cmd: {command: 'del /q /s /f "%localappdata%\Apple Computer\Safari\WebpageIcons.db"', option: 'opt-clean'}
+- !cmd: {command: 'del /q /s /f "%USERPROFILE%\Local Settings\Application Data\Apple Computer\Safari\Cache.db"', option: 'opt-clean'}
+- !cmd: {command: 'del /q /s /f "%localappdata%\Apple Computer\Safari\Cache.db"', option: 'opt-clean'}
+- !cmd: {command: 'del /q /s /f "%USERPROFILE%\Local Settings\Application Data\Apple Computer\Safari\Cookies.db"', option: 'opt-clean'}
+- !cmd: {command: 'del /q /s /f "%localappdata%\Apple Computer\Safari\Cookies.db"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%USERPROFILE%\Local Settings\Application Data\Apple Computer\Safari"', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%AppData%\Apple Computer\Safari"', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q /a %LocalAppData%\Microsoft\Windows\Explorer\*.db', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %localappdata%\Temp\*.tmp', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %localappdata%\Temp\*.bac', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %localappdata%\Temp\*.old', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q "%WINDIR%\Temp"', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\*.tmp', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\*._mp', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\*.log', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\*.gid', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\*.chk', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\*.old', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %systemdrive%\recycled\*.*', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %windir%\*.bak', option: 'opt-clean'}
+- !cmd: {command: 'del /f /s /q %windir%\prefetch\*.*', option: 'opt-clean'}
+- !cmd: {command: 'rd /s /q %windir%\temp & md %windir%\temp', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %userprofile%\cookies\*.*', option: 'opt-clean'}
+- !cmd: {command: 'del /f /q %userprofile%\recent\*.*', option: 'opt-clean'}

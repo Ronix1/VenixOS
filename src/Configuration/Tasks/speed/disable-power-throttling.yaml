@@ -1,0 +1,65 @@
+---
+title: tweak
+actions:
+  - !writeStatus: {status: 'Disabling power throttling'}
+
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Executive'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\ModernSleep'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power'
+    value: 'CoalescingTimerInterval'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power'
+    value: 'PlatformAoAcOverride'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power'
+    value: 'EnergyEstimationEnabled'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power'
+    value: 'EventProcessorEnabled'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power'
+    value: 'CsEnabled'
+    data: '0'
+    type: REG_DWORD
+  - !registryValue:
+    path: 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling'
+    value: 'PowerThrottlingOff'
+    data: '1'
+    type: REG_DWORD
