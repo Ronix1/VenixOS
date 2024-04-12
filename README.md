@@ -9,7 +9,7 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
 - Made with [AME Wizard](https://ameliorated.io/)
 - [Discord](https://discord.gg/tweaks) | [Website](https://www.venix.pro/)
 
-## Usage
+## Getting started
 > [!WARNING]  
 > **Tweaking your system can be risky. Always have a backup ready just in case.**
 - Download [AME Wizard](https://download.ameliorated.io/AME%20Wizard%20Beta.zip) and the VenixOS Playbook (Make sure it says verified playbook in AME Wizard) <b>(.apbx)</b>
