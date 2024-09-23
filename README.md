@@ -7,7 +7,7 @@ VenixOS is a Windows modification that offers a **100% free** and **open-source*
 ## About
 - VenixOS is a **replacement** for VTweaker and old .iso version of VenixOS
 - Made with [AME Wizard](https://ameliorated.io/)
-- [Discord](https://discord.gg/tweaks) | [Website](https://www.venix.pro/)
+- [Discord](https://discord.gg/5gzvtffMvH) | [Website](https://www.venix.pro/)
 
 ## Getting started
 > [!WARNING]  
